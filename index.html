@@ -62,25 +62,28 @@
                             </svg>
                         </button>
                         <form name="signup-form" autocomplete="on" novalidate>
-                            <span class="signup"> Оставьте свои данные, мы вам перезвоним </span>
+                            <p class="signup"> Оставьте свои данные, мы вам перезвоним </p>
                             <div class="signup-labels">
-                                <label class="signup-label">
-                                    Имя
-                                    <input type="text" name="Имя">
-                                </label>
-                                <label class="signup-label">
-                                    Телефон
-                                    <input type="tel" name="Телефон">
-                                </label>
-                                <label class="signup-label">
-                                    Почта
-                                    <input type="email" name="Почта">
-                                </label>
-                                <label class="signup-label">
-                                    Комментарий
-                                    <textarea name="Комментарий" rows="5" placeholder="Введите текст"></textarea>
-                                </label>
+                                <div class="signup-label">
+                                    <label for="name"> Имя </label>
+                                    <input type="text" name="Имя" id="name" />
+                                </div>
+                                <div class="signup-label">
+                                    <label for="phone"> Телефон </label>
+                                    <input type="text" name="Телефон" id="phone" />
+                                </div>
+                                <div class="signup-label">
+                                    <label for="mail"> Почта </label>
+                                    <input type="text" name="Почта" id="mail" />
+                                </div>
+                                <div class="signup-label">
+                                    <label for="comment"> Комментарий </label>
+                                    <textarea name="Коммeнтарий" rows="5" placeholder="Введите текст" id="comment"></textarea>
+                                </div>
                             </div>
+                            <input type="checkbox" name="permition" id="permition">
+                            <label for="permition" class="signup-permition"> Соглашаюсь с рассылкой и принимаю Условия договора </label>
+                            <button type="submit"> Отправить </button>
                         </form>
                     </div>
                 </div>
