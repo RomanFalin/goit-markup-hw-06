@@ -11,33 +11,39 @@
 </head>
      <body>
 <!--Header-->
-        <header class="section-header">
-            <div class="container header">
-                <nav class="navigation">
-                    <a class="main-logo" href="./index.html" lang="en">
-                    <span class="main-logo-first">Web</span>Studio
+        <header class="section_header">
+            <div class="header container">
+                <nav class="header_navigation">
+                    <a class="header_logo" href="./index.html" lang="en">
+                        <span class="header_logo--first">Web</span>Studio
                     </a>
-                    <ul class="web-pages">
-                        <li class="item"><a class="link active" href="./index.html"> Студия </a></li>
-                        <li class="item"><a class="link" href="./portfolio.html"> Портфолио </a></li>
-                        <li class="item"><a class="link" href=""> Контакты </a></li>
+                    <ul class="header_pages">
+                        <li class="header_pages_item">
+                            <a class="header_pages_link active" href="./index.html"> Студия </a>
+                        </li>
+                        <li class="header_pages_item">
+                            <a class="header_pages_link" href="./portfolio.html"> Портфолио </a>
+                        </li>
+                        <li class="header_pages_item">
+                            <a class="header_pages_link" href=""> Контакты </a>
+                        </li>
                     </ul>
                 </nav>
-                <ul class="contacts">
-                    <li class="item email">
-                        <a class="contact" href="mailto:info@devstudio.com">
-                            <div class="contact-icons">
-                                <svg class="contact-icon">
+                <ul class="header_contacts">
+                    <li class="header_contacts_item">
+                        <a class="header_pages_link" href="mailto:info@devstudio.com">
+                            <div class="header_pages_icons">
+                                <svg class="header_pages_icon">
                                     <use href="./images/sprite.svg#envelope"></use>
                                 </svg>
                             </div>
                             info@devstudio.com
                         </a>
                     </li>
-                    <li class="item phone">
-                        <a class="contact" href="tel:+380961111111">
-                            <div class="contact-icons">
-                                <svg class="contact-icon">
+                    <li class="header_contacts_item">
+                        <a class="header_pages_link" href="tel:+380961111111">
+                            <div class="header_pages_icons">
+                                <svg class="header_pages_icon">
                                     <use href="./images/sprite.svg#phone"></use>
                                 </svg>
                             </div>
@@ -66,25 +72,41 @@
                             <div class="signup_form_list">
                                 <div class="signup_form_item">
                                     <label class="signup_form_label" for="name"> Имя </label>
-                                    <input class="signup_form_input" type="text" name="Имя" id="name" />
+                                    <div class="signup_form_field">
+                                        <input class="signup_form_input" type="text" name="Имя" id="name" autocomplete="off"/>
+                                        <svg class="signup_form_icon">
+                                            <use href="./images/sprite.svg#person-form"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="signup_form_item">
                                     <label class="signup_form_label" for="phone"> Телефон </label>
-                                    <input class="signup_form_input" type="text" name="Телефон" id="phone" />
+                                    <div class="signup_form_field">
+                                        <input class="signup_form_input" type="text" name="Телефон" id="phone" autocomplete="off"/>
+                                        <svg class="signup_form_icon">
+                                            <use href="./images/sprite.svg#phone-form"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="signup_form_item">
                                     <label class="signup_form_label" for="mail"> Почта </label>
-                                    <input class="signup_form_input" type="text" name="Почта" id="mail" />
+                                    <div class="signup_form_field">
+                                        <input class="signup_form_input" type="text" name="Почта" id="mail" autocomplete="off"/>
+                                        <svg class="signup_form_icon">
+                                            <use href="./images/sprite.svg#email-form"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div class="signup_form_item">
                                     <label class="signup_form_label" for="comment"> Комментарий </label>
                                     <textarea class="signup_form_textarea" name="Коммeнтарий" rows="5" placeholder="Введите текст" id="comment"></textarea>
                                 </div>
                             </div>
-                            <div class="signup_form_permition">
-                                <input class="signup_form_checkbox" type="checkbox" name="permition" id="permition">
-                                <label for="permition" class="signup-permition"> Соглашаюсь с рассылкой и принимаю 
-                                    <span class="signup_form_policy">
+                            <div class="signup_permition">
+                                <label class="signup_permition_label">
+                                    <input class="signup_form_checkbox" type="checkbox" name="permition">
+                                    <span class="checkbox_icon"></span>
+                                    <span class="signup_form_policy"> Соглашаюсь с рассылкой и принимаю
                                         <a href="" class="policy_link"> Условия договора </a>
                                     </span>
                                 </label>

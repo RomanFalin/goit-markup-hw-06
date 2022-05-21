@@ -59,24 +59,7 @@ a {
         padding-bottom: var(--section-padding);*/
 }
 
-/*----------------------------------------HEADER----------------------------------------*/
-
-.section-header{
-    border-bottom: 1px #ECECEC solid;
-}
-
-.header{
-    display: flex;
-    align-items: center;
-}
-
-.navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.visually-hidden{
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -89,7 +72,24 @@ a {
     overflow: hidden;
 }
 
-.main-logo{
+/*----------------------------------------HEADER----------------------------------------*/
+
+.section_header{
+    border-bottom: 1px #ECECEC solid;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.header_navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_logo{
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -98,11 +98,11 @@ a {
     margin-right: 93px;
 }
 
-.main-logo-first{
+.header_logo--first{
     color: var(--brand-color);
 }
 
-.web-pages{
+.header_pages{
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -111,11 +111,11 @@ a {
     display: flex;
 }
 
-.web-pages > .item:not(:last-child){
+.header_pages_item:not(:last-child){
     margin-right: 50px;
 }
 
-.link{
+.header_pages_link{
     position: relative;
     display: block;
     color: var(--main-color);
@@ -125,11 +125,11 @@ a {
     transition-delay: 0;
 }
 
-.active{
+.header_pages_link.active{
     color: var(--brand-color);
 }
 
-.link.active::after{
+.header_pages_link.active::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -140,23 +140,23 @@ a {
     border-radius: 2px;
 }
 
-.link:hover,
-.link:focus,
-.link:active{
+.header_pages_link:hover,
+.header_pages_link:focus,
+.header_pages_link:active{
     color: var(--brand-color);
 }
 
-.contacts{
+.header_contacts{
     display: flex;
     margin-left: auto;
     align-items: center;
 }
 
-.contacts > .item:not(:first-child){
+.header_contacts_item:not(:first-child){
     margin-left: 50px;
 }
 
-.contact{
+.header_pages_link{
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -165,36 +165,36 @@ a {
     list-style-type: none;
 }
 
-.contacts .item{
+.header_contacts_item{
     display: flex;
 }
 
-.contacts .contact{
+.header_pages_link{
     display: flex;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0;
 }
 
-.contacts .contact:hover,
-.contacts .contact:hover .contact-icon{
+.header_pages_link:hover,
+.header_pages_link:hover .header_pages_icon{
     color: var(--brand-color);
     fill: var(--brand-color);
 }
 
-.contacts .contact:focus,
-.contacts .contact:focus .contact-icon{
+.header_pages_link:focus,
+.header_pages_link:focus .header_pages_icon{
     color: var(--brand-color);
     fill: var(--brand-color);
 }
 
-.contact-icons{
+.header_pages_icons{
     width: 16px;
     height: 16px;
     margin-right: 10px;
 }
 
-.contact-icon{
+.header_pages_icon{
     width: 16px;
     height: 16px;
     fill: var(--sub-text-color);
@@ -353,12 +353,40 @@ a {
     color: #757575;
 }
 
+.signup_form_field{
+    position: relative;
+}
+
 .signup_form_input{
     padding: 12px 42px;
     height: 40px;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+.signup_form_icon{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+.signup_form_item:focus-within .signup_form_icon{
+    fill: var(--brand-color);
+}
+
+.signup_form_input:focus{
+    outline: none;
+    border-color: var(--brand-color);
 }
 
 .signup_form_textarea{
@@ -368,6 +396,14 @@ a {
     padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+.signup_form_textarea:focus{
+    outline: none;
+    border-color: var(--brand-color);
 }
 
 .signup_form_textarea::placeholder{
@@ -378,13 +414,45 @@ a {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.signup_form_permition{
+.signup_permition{
     display: flex;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.signup_form_permition label{
+.signup_permition_label{
+    display: flex;
+    align-items: center;
+}
+
+.signup_form_checkbox{
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox_icon{
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+.signup_form_checkbox:checked + .checkbox_icon{
+    background-color: var(--brand-color);
+    background-image: url(../images/checkbox-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+    border-color: transparent;
+}
+
+.signup_form_policy{
     margin-left: 7px;
     font-weight: 400;
     font-size: 14px;
@@ -811,6 +879,14 @@ a {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: transparent;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+.subscribe_action:focus{
+    outline: none;
+    border-color: var(--back-color);
 }
 
 .subscribe_action::placeholder{
@@ -840,6 +916,14 @@ a {
     transition-delay: 0;
 }
 
+.subscribe_button::after{
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url(../images/subscribe-icon.svg);
+}
+
 .subscribe_button:hover,
 .subscribe_button:focus{
     background-color: var(--button-hover);
@@ -847,22 +931,22 @@ a {
 
 /*----------------------------------------FILTERS----------------------------------------*/
 
-.section-filters{
+.section_filters{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
 
-.filter-buttons{
+.filters_buttons{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-.filter-buttons > .item:not(:last-child){
+.filters_buttons_item:not(:last-child){
     margin-right: 8px;
 }
 
-.filter-button{
+.filters_button{
     background: var(--team-color);
     border-radius: 4px;
     width: auto;
@@ -879,8 +963,8 @@ a {
     transition-delay: 0;
 }
 
-.filter-button:hover,
-.filter-button:focus{
+.filters_button:hover,
+.filters_button:focus{
     background: var(--brand-color);
     color: var(--back-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -892,7 +976,7 @@ a {
 
 /*----------------------------------------EXAMPLES----------------------------------------*/
 
-.work-examples{
+.work_examples{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -902,14 +986,14 @@ a {
     margin-bottom: calc(-1 * var(--item-margin));
 }
 
-.work-example{
+.work_example_item{
     background: var(--back-color);
     flex-basis: calc(100% / 3 - var(--item-margin));
     margin-right: var(--item-margin);
     margin-bottom: var(--item-margin);
 }
 
-.work-title{
+.work_example_title{
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -918,34 +1002,31 @@ a {
     margin-bottom: 4px;
 }
 
-.work-sphere{
+.work_example_sphere{
     font-size: 16px;
     line-height: 1.8;
     color: var(--sub-text-color);
 }
 
-.work-img{
+.work_example_img{
     display: block;
+    position: relative;
+    overflow: hidden;
 }
 
-.work-img > .text{
+.work_example_text{
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
 }
 
-.work-img:hover,
-.work-img:focus{
+.work_example_item:hover,
+.work_example_item:focus{
     box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.work-thumb{
-    position: relative;
-    overflow: hidden;
-}
-
-.work-explain{
+.work_example_explain{
     position: absolute;
     display: inline-block;
     width: 100%;
@@ -962,8 +1043,8 @@ a {
     transition-delay: 0;
 }
 
-.work-example:hover .work-explain,
-.work-example:focus .work-explain{
+.work_example_item:hover .work_example_explain,
+.work_example_item:focus .work_example_explain {
     opacity: 1;
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(-100%);
