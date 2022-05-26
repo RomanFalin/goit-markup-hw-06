@@ -74,7 +74,7 @@ a {
 
 /*----------------------------------------HEADER----------------------------------------*/
 
-.section_header{
+.section-header{
     border-bottom: 1px #ECECEC solid;
 }
 
@@ -83,13 +83,13 @@ a {
     align-items: center;
 }
 
-.header_navigation{
+.navigation{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.header_logo{
+.navigation__logo{
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -98,11 +98,11 @@ a {
     margin-right: 93px;
 }
 
-.header_logo--first{
+.navigation__logo--first{
     color: var(--brand-color);
 }
 
-.header_pages{
+.pages{
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -111,11 +111,11 @@ a {
     display: flex;
 }
 
-.header_pages_item:not(:last-child){
+.pages__item:not(:last-child){
     margin-right: 50px;
 }
 
-.header_pages_link{
+.pages__link{
     position: relative;
     display: block;
     color: var(--main-color);
@@ -125,11 +125,11 @@ a {
     transition-delay: 0;
 }
 
-.header_pages_link.active{
+.pages__link.active{
     color: var(--brand-color);
 }
 
-.header_pages_link.active::after{
+.pages__link.active::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -140,23 +140,23 @@ a {
     border-radius: 2px;
 }
 
-.header_pages_link:hover,
-.header_pages_link:focus,
-.header_pages_link:active{
+.pages__link:hover,
+.pages__link:focus,
+.pages__link:active{
     color: var(--brand-color);
 }
 
-.header_contacts{
+.header-contacts{
     display: flex;
     margin-left: auto;
     align-items: center;
 }
 
-.header_contacts_item:not(:first-child){
+.header-contacts__item:not(:first-child){
     margin-left: 50px;
 }
 
-.header_pages_link{
+.header-contacts__link{
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -165,36 +165,36 @@ a {
     list-style-type: none;
 }
 
-.header_contacts_item{
+.header-contacts__item{
     display: flex;
 }
 
-.header_pages_link{
+.header-contacts__link{
     display: flex;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0;
 }
 
-.header_pages_link:hover,
-.header_pages_link:hover .header_pages_icon{
+.header-contacts__link:hover,
+.header-contacts__link:hover .header-contacts__icon{
     color: var(--brand-color);
     fill: var(--brand-color);
 }
 
-.header_pages_link:focus,
-.header_pages_link:focus .header_pages_icon{
+.header-contacts__link:focus,
+.header-contacts__link:focus .header-contacts__icon{
     color: var(--brand-color);
     fill: var(--brand-color);
 }
 
-.header_pages_icons{
+.header-contacts__thumb{
     width: 16px;
     height: 16px;
     margin-right: 10px;
 }
 
-.header_pages_icon{
+.header-contacts__icon{
     width: 16px;
     height: 16px;
     fill: var(--sub-text-color);
@@ -205,7 +205,7 @@ a {
 
 /*----------------------------------------HERO----------------------------------------*/
 
-.section_hero{
+.section-hero{
     background: var(--footer-color);
     margin-left: auto;
     margin-right: auto;
@@ -225,7 +225,7 @@ a {
     text-align: center;
 }
 
-.hero_title{
+.hero__title{
     font-weight: 900;
     font-size: 44px;
     width: 696px;
@@ -238,7 +238,7 @@ a {
     margin-bottom: var(--item-margin);
 }
 
-.hero_button{
+.hero__button{
     background: var(--brand-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -256,8 +256,8 @@ a {
     transition-delay: 0;
 }
 
-.hero_button:hover,
-.hero_button:focus{
+.hero__button:hover,
+.hero__button:focus{
     background-color: var(--button-hover);
 }
 
@@ -281,7 +281,7 @@ a {
     pointer-events: none;
 }
 
-.backdrop_modal{
+.modal{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -296,7 +296,7 @@ a {
     border-radius: 4px;
 }
 
-.modal_close_button{
+.modal-close{
     position: absolute;
     top: 8px;
     right: 8px;
@@ -312,7 +312,7 @@ a {
     cursor: pointer;
 }
 
-.close_button_icon{
+.modal-close__icon{
     width: 18px;
     height: 18px;
     fill: #000000;
@@ -321,11 +321,11 @@ a {
     transition-delay: 0;
 }
 
-.modal_close_button:hover .close_button_icon{
+.modal-close:hover .modal-close__icon{
     fill: var(--brand-color);
 }
 
-.signup_form_title{
+.modal-form__title{
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
