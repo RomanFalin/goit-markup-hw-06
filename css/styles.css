@@ -429,7 +429,8 @@ a {
 }
 
 .signup_form_checkbox:checked + .checkbox_icon,
-.signup_form_checkbox:hover + .checkbox_icon{
+.signup_form_checkbox:hover + .checkbox_icon,
+.signup_form_checkbox:focus + .checkbox_icon{
     background-color: var(--brand-color);
     background-image: url(../images/checkbox-icon.svg);
     background-repeat: no-repeat;
